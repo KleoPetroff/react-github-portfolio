@@ -1,0 +1,24 @@
+.header-links-wrapper {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: #515e6d;
+}
+
+.header-links.active {
+    color: #0077ff;
+    font-weight: bold;
+    padding-bottom: 0;
+    border-bottom: 2px solid #0077ff;
+}
+
+.header-links.disabled {
+    cursor: default;
+}
