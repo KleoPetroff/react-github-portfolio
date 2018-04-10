@@ -9,7 +9,7 @@ const RepoCard = () => (
       <div className='repo-title'>react-webpack-boilerplate</div>
       <div className="repo-description">Minimalistic ES6 React boilerplate with Hot Reloading using Webpack 3</div>
       <div className="repo-stars">243 stars</div>
-      <a className="repo-link" href='https://github.com/KleoPetroff/react-webpack-boilerplate' target='_blank'>Github Link</a>
+      <a className="repo-link" href='https://github.com/KleoPetroff/react-webpack-boilerplate' target='_blank' rel='noopener noreferrer'>Github Link</a>
     </div>
   </div>
 );

@@ -15,3 +15,15 @@
 .disabled {
     cursor: default;
 }
+
+@media (max-width: 900px) {
+    .header-links {
+        display: block;
+        margin: 0;
+        padding: 15px 0;
+    }
+
+    .active {
+        border-bottom: none;
+    }
+}
