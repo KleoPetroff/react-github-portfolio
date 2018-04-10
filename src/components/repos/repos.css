@@ -1,0 +1,30 @@
+.main-content {
+    width: 80%;
+    float: right;
+    margin: 20px 50px auto 0;
+}
+
+.content-heading {
+    margin-bottom: 20px;
+    font-family: Lato, sans-serif;
+    font-weight: bold;
+    font-size: 21px;
+}
+
+.content-grid {
+    min-height: 300px;
+}
+
+@media (max-width: 900px) {
+
+    .content-heading {
+        text-align: center;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 0 40px;
+        float: none;
+
+    }
+}

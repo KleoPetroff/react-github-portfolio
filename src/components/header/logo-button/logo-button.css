@@ -1,0 +1,13 @@
+.logo {
+    margin-left: 25px;
+    float: left;
+}
+
+@media (max-width: 900px) {
+    .logo {
+        display: inline-block;
+        margin-left: 0;
+        margin-bottom: 10px;
+        float: none;
+    }
+}
