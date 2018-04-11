@@ -1,6 +1,6 @@
 .repo {
-    display: inline-block;
-    margin: 10px 20px;
+    float: left;
+    margin: 10px 20px 20px;
     width: 20%;
     background-color: #fff;
 }
@@ -8,12 +8,41 @@
 .repo-image {
     height: 200px;
     width: 100%;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png");
-    background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #0077ff;
+    background-image: url("../../../images/icons/general-icon.png");
     border-radius: 5px 5px 0 0;
+}
+
+.javascript {
+    background-color: #d6ba32;
+    background-image: url("../../../images/icons/js-logo.png");
+}
+
+.python {
+    background-color: #4a98c8;
+    background-image: url("../../../images/icons/python-icon.png");
+}
+
+.css {
+    background-color: #066eb8;
+    background-image: url("../../../images/icons/css-icon.png");
+}
+
+.html {
+    background-color: #f47933;
+    background-image: url("../../../images/icons/html-icon.png");
+}
+
+.batchfile {
+    background-color: #323232;
+    background-image: url("../../../images/icons/batch-icon.png");
+}
+
+.react {
+    background-color: #00d7fe;
+    background-image: url("../../../images/icons/reactjs-logo.png");
 }
 
 .repo-info {
@@ -26,10 +55,11 @@
 
 .repo-title {
     color: #282d2f;
-    margin-bottom: 3px;
+    margin: 5px 0 10px;
     font-weight: bold;
     font-size: 18px;
-    line-height: 2;
+    line-height: 1.4;
+    min-height: 50px;
 }
 
 
@@ -42,11 +72,12 @@
 .repo-stars {
     float: left;
     color: #282D2F;
+    font-weight: bold;
 }
 
 .repo-link {
     float: right;
-    color: #0077ff;
+    color: #0078bc;
     font-weight: bold;
     text-decoration: none;
 }
@@ -61,5 +92,11 @@
     .repo {
         width: 100%;
         margin: 0 0 30px;
+    }
+
+    .repo-title,
+    .repo-description {
+        min-height: 0;
+        margin-bottom: 20px;
     }
 }
