@@ -1,17 +1,23 @@
 import React from 'react';
+import { generateClass } from '../../../helpers';
 
 import './repo-card.css'
 
-const RepoCard = () => (
-  <div className='repo'>
-    <div className='repo-image' />
-    <div className='repo-info'>
-      <div className='repo-title'>react-webpack-boilerplate</div>
-      <div className="repo-description">Minimalistic ES6 React boilerplate with Hot Reloading using Webpack 3</div>
-      <div className="repo-stars">243 stars</div>
-      <a className="repo-link" href='https://github.com/KleoPetroff/react-webpack-boilerplate' target='_blank' rel='noopener noreferrer'>Github Link</a>
+const RepoCard = ({repo}) => {
+  const languageClass = generateClass(repo.name, repo.language);
+
+  return (
+    <div className='repo'>
+      <div className={'repo-image ' + languageClass} />
+      <div className='repo-info'>
+        <div className='repo-title'>{repo.name}</div>
+        <div className="repo-description">{repo.description}</div>
+        <div className="repo-stars">{repo.stargazers_count} stars</div>
+        <a className="repo-link" href={repo.html_url} target='_blank' rel='noopener noreferrer'>Github Link</a>
+      </div>
     </div>
-  </div>
-);
+  )
+
+};
 
 export default RepoCard;
