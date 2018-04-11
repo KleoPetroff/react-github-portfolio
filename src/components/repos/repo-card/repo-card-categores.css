@@ -1,0 +1,29 @@
+.javascript {
+    background-color: #d6ba32;
+    background-image: url("../../../images/icons/js-logo.png");
+}
+
+.python {
+    background-color: #4a98c8;
+    background-image: url("../../../images/icons/python-icon.png");
+}
+
+.css {
+    background-color: #066eb8;
+    background-image: url("../../../images/icons/css-icon.png");
+}
+
+.html {
+    background-color: #f47933;
+    background-image: url("../../../images/icons/html-icon.png");
+}
+
+.batchfile {
+    background-color: #323232;
+    background-image: url("../../../images/icons/batch-icon.png");
+}
+
+.react {
+    background-color: #00d7fe;
+    background-image: url("../../../images/icons/reactjs-logo.png");
+}

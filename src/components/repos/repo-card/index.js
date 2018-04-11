@@ -1,7 +1,8 @@
 import React from 'react';
 import { generateClass } from '../../../helpers';
 
-import './repo-card.css'
+import './repo-card.css';
+import './repo-card-categores.css';
 
 const RepoCard = ({repo}) => {
   const languageClass = generateClass(repo.name, repo.language);
