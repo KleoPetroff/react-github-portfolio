@@ -25,9 +25,9 @@ export function getGithubRepos() {
 export function generateClass(repo) {
   const { name, language } = repo;
 
-  if (name.toLowerCase().indexOf('react') >= 0) {
+  if (name.toLowerCase().startsWith('react')) {
     return 'react';
   }
 
-  return language ? language.toLowerCase() : ''
+  return language ? language.toLowerCase() : '';
 }
