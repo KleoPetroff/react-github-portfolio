@@ -5,7 +5,7 @@ import './repo-card.css';
 import './repo-card-categores.css';
 
 const RepoCard = ({repo}) => {
-  const languageClass = generateClass(repo.name, repo.language);
+  const languageClass = generateClass(repo);
 
   return (
     <div className='repo'>

@@ -16,14 +16,15 @@ export function getGithubRepos() {
 
 /**
  * Generate a class name based on the language passed.
- * @param name - the name of the repo
- * @param language - the programming language
+ * @param repo - the repository object
  * @returns {string} - Returns "react" if the name param has
  * react in it, else returns one of the following:
  * - the language name if not empty
  * - empty string if null
  */
-export function generateClass(name, language) {
+export function generateClass(repo) {
+  const { name, language } = repo;
+
   if (name.toLowerCase().indexOf('react') >= 0) {
     return 'react';
   }
