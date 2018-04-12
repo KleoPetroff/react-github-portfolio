@@ -1,6 +1,6 @@
 .repo {
     float: left;
-    margin: 10px 20px 20px;
+    margin: 10px 40px 20px 0;
     width: 20%;
     background-color: #fff;
 }
@@ -10,39 +10,9 @@
     width: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    background-color: #0077ff;
-    background-image: url("../../../images/icons/general-icon.png");
+    background-color: #1fb7c7;
+    background-image: url("../../../images/icons/default-icon.png");
     border-radius: 5px 5px 0 0;
-}
-
-.javascript {
-    background-color: #d6ba32;
-    background-image: url("../../../images/icons/js-logo.png");
-}
-
-.python {
-    background-color: #4a98c8;
-    background-image: url("../../../images/icons/python-icon.png");
-}
-
-.css {
-    background-color: #066eb8;
-    background-image: url("../../../images/icons/css-icon.png");
-}
-
-.html {
-    background-color: #f47933;
-    background-image: url("../../../images/icons/html-icon.png");
-}
-
-.batchfile {
-    background-color: #323232;
-    background-image: url("../../../images/icons/batch-icon.png");
-}
-
-.react {
-    background-color: #00d7fe;
-    background-image: url("../../../images/icons/reactjs-logo.png");
 }
 
 .repo-info {
