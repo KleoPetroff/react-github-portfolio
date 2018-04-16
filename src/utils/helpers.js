@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import config from './config';
+import config from '../config';
 
 /**
  * Get all public Github repos
@@ -30,4 +30,15 @@ export function generateClass(repo) {
   }
 
   return language ? language.toLowerCase() : '';
+}
+
+export function setRepoLanguage(repo) {
+  let formatted = repo.language;
+
+  if (repo.name.toLowerCase().startsWith('react')) {
+    formatted = 'React';
+  }
+
+
+  return formatted ? formatted : 'General';
 }

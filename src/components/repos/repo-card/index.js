@@ -1,5 +1,5 @@
 import React from 'react';
-import { generateClass } from '../../../helpers';
+import { generateClass } from '../../../utils/helpers';
 
 import './repo-card.css';
 import './repo-card-categores.css';
