@@ -13,7 +13,14 @@ body {
 }
 
 .wrapper {
+    height: 100%;
     font-family: Lato, sans-serif;
     font-weight: normal;
     font-size: 15px;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
 }

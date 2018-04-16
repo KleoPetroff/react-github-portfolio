@@ -4,8 +4,9 @@ import './links.css';
 
 const Links = () => (
   <Fragment>
-    <a className='header-links active' href="">Projects</a>
-    <a className='header-links disabled' >Current Project</a>
+    <div className='header-links active'>Projects</div>
+    <div className='header-links disabled' >Current Project</div>
+    <div className='header-links'>Issues</div>
   </Fragment>
 );
 
