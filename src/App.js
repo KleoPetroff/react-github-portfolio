@@ -5,7 +5,7 @@ import Header from './components/header';
 import Repos from "./components/repos";
 import Sidebar from './components/sidebar';
 
-import { getGithubRepos, setRepoLanguage } from './utils/helpers'
+import { getRepositories, setRepoLanguage } from './utils/helpers'
 import { sort } from './utils/sorting';
 
 class App extends Component {
@@ -20,7 +20,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    getGithubRepos().then(res => {
+    getRepositories().then(res => {
       const created = res.data
         .filter(repo => repo.fork === false)
         .map(repo => {
