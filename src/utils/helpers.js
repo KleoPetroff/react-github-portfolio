@@ -7,8 +7,7 @@ import config from '../config';
  * @returns {AxiosPromise}
  */
 export function getGithubRepos() {
-  return axios.get('https://api.github.com/user/repos?' +
-    'access_token=' + config.API_TOKEN +
+  return axios.get('https://api.github.com/users/KleoPetroff/repos?' +
     '&per_page=' + config.per_page +
     '&affiliation=' + config.affiliation +
     '&visibility=' + config.visibility);
