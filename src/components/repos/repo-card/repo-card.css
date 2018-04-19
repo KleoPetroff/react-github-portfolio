@@ -3,6 +3,7 @@
     margin: 10px 40px 20px 0;
     width: 21%;
     background-color: #fff;
+    text-decoration: none;
 }
 
 .repo-image {
@@ -45,9 +46,9 @@
     font-weight: bold;
 }
 
-.repo-link {
+.repo-forks {
     float: right;
-    color: #0078bc;
+    color: #282D2F;
     font-weight: bold;
     text-decoration: none;
 }
