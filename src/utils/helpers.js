@@ -9,11 +9,13 @@ export function getRepositories() {
 }
 
 export function setRepoLanguage(repo) {
-  let formatted = repo.language;
+  let { language, name } = repo;
 
-  if (repo.name.toLowerCase().startsWith('react')) {
-    formatted = 'react';
+  if (name.toLowerCase().startsWith('react')) {
+    language = 'react';
   }
 
-  return formatted ? formatted.toLowerCase() : '';
+  repo.language = language ? language.toLowerCase() : '';
+
+  return repo;
 }

@@ -12,29 +12,38 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      repos: []
-    };
-
     this.onSortChange = this.onSortChange.bind(this);
   }
 
-  componentDidMount() {
-    getRepositories().then(res => {
-      const created = res.data
-        .filter(repo => repo.fork === false)
-        .map(repo => {
-          repo.language = setRepoLanguage(repo);
-          return repo;
-        })
-        .sort((a, b) => b.stargazers_count - a.stargazers_count);
+  state = {
+    repos: []
+  };
 
-      this.setState({ repos: created });
-    })
+  async componentDidMount() {
+    let repos = [];
+
+    try {
+      repos = await getRepositories();
+
+      repos = repos.data
+        .filter(repo => repo.fork === false)
+        .sort((a, b) => b.stargazers_count - a.stargazers_count)
+        .map(repo => setRepoLanguage(repo));
+
+      // Store the repositories in localStorage after
+      // every successful request and load them only
+      // when Github's request limit is exceeded
+      // which is 60 requests per hour
+      localStorage.setItem('repos', JSON.stringify(repos));
+    } catch (e) {
+      repos = JSON.parse(localStorage.getItem('repos'));
+    } finally {
+      this.setState({ repos });
+    }
   }
 
   onSortChange(sortBy, order) {
-    this.setState({repos: sort(this.state.repos,sortBy, order)});
+    this.setState({ repos: sort(this.state.repos, sortBy, order) });
   }
 
   render() {
