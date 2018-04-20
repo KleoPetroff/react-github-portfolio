@@ -2,8 +2,6 @@ import React, {Fragment, Component} from 'react';
 
 import './filters.css';
 
-
-
 export default class Sorting extends Component {
   sortCategories = ['language', 'stargazers_count', 'created_at'];
   orderCategories = ['asc', 'desc'];

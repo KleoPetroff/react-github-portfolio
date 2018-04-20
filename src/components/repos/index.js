@@ -1,8 +1,9 @@
 import React from 'react';
 import shortid from 'shortid';
 
-import './repos.css';
 import RepoCard from "./repo-card";
+
+import './repos.css';
 
 const Repos = ({repos}) => (
   <div className='main-content'>
