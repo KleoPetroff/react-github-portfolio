@@ -1,7 +1,7 @@
 import React from 'react';
 import shortid from 'shortid';
 
-import RepoCard from "./repo-card";
+import RepoCard from "./repo-card/RepoCard";
 
 import './repos.css';
 
