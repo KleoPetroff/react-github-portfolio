@@ -1,7 +1,7 @@
 import React from 'react';
 
-import LogoButton from './logo-button';
-import Links from './links';
+import LogoButton from './logo-button/LogoButton';
+import Links from './links/Links';
 
 import './header.css';
 import logo from '../../images/logo.png';

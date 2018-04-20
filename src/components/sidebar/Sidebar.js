@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Sorting from './filters';
+import Sorting from './filters/Filters';
 
 import './sidebar.css';
 

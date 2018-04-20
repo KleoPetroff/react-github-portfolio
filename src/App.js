@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import Header from './components/header';
-import Repos from "./components/repos";
-import Sidebar from './components/sidebar';
+import Header from './components/header/Header';
+import Repos from "./components/repos/Repos";
+import Sidebar from './components/sidebar/Sidebar';
 
 import { getRepositories, setRepoLanguage } from './utils/helpers'
 import { sort } from './utils/sorting';
