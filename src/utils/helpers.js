@@ -8,6 +8,10 @@ export function getRepositories() {
   return axios.get('https://api.github.com/users/KleoPetroff/repos?&per_page=100');
 }
 
+export function getUserInfo() {
+  return axios.get('https://api.github.com/users/KleoPetroff');
+}
+
 export function setRepoLanguage(repo) {
   let { language, name } = repo;
 
