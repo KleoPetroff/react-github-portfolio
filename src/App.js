@@ -27,7 +27,6 @@ class App extends Component {
 
       repos = repos.data
         .filter(repo => repo.fork === false)
-        .sort((a, b) => b.stargazers_count - a.stargazers_count)
         .map(repo => setRepoLanguage(repo));
 
       // Store the repositories in localStorage after
@@ -38,7 +37,7 @@ class App extends Component {
     } catch (e) {
       repos = JSON.parse(localStorage.getItem('repos'));
     } finally {
-      this.setState({ repos });
+      this.setState({ repos: sort(repos, 'stargazers_count', 'desc') });
     }
   }
 
