@@ -1,8 +1,6 @@
 # Github Portfolio
 
-<div style="text-align: center"><img src="./repo_assets/logo.png" /></div>
-
-Stylish project portfolio built with React.
+<p align="center"><img src="./repo_assets/logo.png" /></p>
 
 ## Getting Started
 
@@ -30,4 +28,4 @@ Pull Requests and Suggestions are highly recommended. Use the [issues](https://g
 
 ## License  
 
-This project is licensed under the MIT License - check the [LICENSE](https://github.com/KleoPetroff/react-github-portfolio/blob/master/LICENSE) to details.   
+This project is licensed under the MIT License - check the [LICENSE](https://github.com/KleoPetroff/react-github-portfolio/blob/master/LICENSE) to details.
