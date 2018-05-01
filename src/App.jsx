@@ -11,8 +11,6 @@ import { sort } from './utils/sorting';
 class App extends Component {
   constructor(props) {
     super(props);
-
-    this.onSortChange = this.onSortChange.bind(this);
   }
 
   state = {
@@ -41,9 +39,9 @@ class App extends Component {
     }
   }
 
-  onSortChange(sortBy, order) {
+  onSortChange = (sortBy, order) => {
     this.setState({ repos: sort(this.state.repos, sortBy, order) });
-  }
+  };
 
   render() {
     return (

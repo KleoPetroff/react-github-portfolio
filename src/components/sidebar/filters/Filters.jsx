@@ -13,9 +13,6 @@ export default class Sorting extends Component {
       sortIndex: 1,
       orderIndex: 1
     };
-
-    this.changeSortType = this.changeSortType.bind(this);
-    this.changeOrderBy = this.changeOrderBy.bind(this);
   }
 
   applySorting() {
@@ -24,15 +21,15 @@ export default class Sorting extends Component {
     this.props.onSortChange(sortName, orderName);
   }
 
-  changeSortType(index) {
+  changeSortType = (index) => {
     if (index === this.state.sortIndex) return;
     this.setState({sortIndex: index}, this.applySorting);
-  }
+  };
 
-  changeOrderBy(index) {
+  changeOrderBy = (index) => {
     if (index === this.state.orderIndex) return;
     this.setState({orderIndex: index}, this.applySorting);
-  }
+  };
 
   render() {
     return (
