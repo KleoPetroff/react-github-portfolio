@@ -1,5 +1,3 @@
-# Github Portfolio
-
 <p align="center"><img src="./repo_assets/logo.png" /></p>
 
 ## Getting Started
