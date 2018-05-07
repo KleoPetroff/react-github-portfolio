@@ -1,31 +1,34 @@
-html,body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 body {
-    background-color: #fafbfc;
+  background-color: #fafbfc;
 }
 
 #root {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-div, span, a {
-    box-sizing: inherit;
+div,
+span,
+a {
+  box-sizing: inherit;
 }
 
 .wrapper {
-    height: 100%;
-    font-family: Lato, sans-serif;
-    font-weight: normal;
-    font-size: 15px;
-    box-sizing: inherit;
+  height: 100%;
+  font-family: Lato, sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  box-sizing: inherit;
 }
 
 .clearfix::after {
-    display: block;
-    content: "";
-    clear: both;
+  display: block;
+  content: '';
+  clear: both;
 }

@@ -26,8 +26,7 @@ export default class Info extends Component {
     if (!this.state.info) return <div />;
 
     return (
-      <div className='info'>
-
+      <div className="info">
         <div className="info-header">{this.state.info.name}</div>
         <div className="info-content">
           <div className="info-section">
@@ -44,6 +43,6 @@ export default class Info extends Component {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }

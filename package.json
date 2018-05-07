@@ -15,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "prettier": "prettier --config ./.prettierrc --write ./src/**/*.{jsx,js}"
+    "prettier": "prettier --config ./.prettierrc --write ./**/*.{jsx,js,md,css}"
   },
   "lint-staged": {
     "**/*.{js,json,jsx,css,md}": ["prettier --write", "git add"]

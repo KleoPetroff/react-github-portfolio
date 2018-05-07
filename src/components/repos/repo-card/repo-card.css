@@ -1,73 +1,72 @@
 .repo {
-    float: left;
-    margin: 10px 40px 20px 0;
-    width: 21%;
-    background-color: #fff;
-    text-decoration: none;
+  float: left;
+  margin: 10px 40px 20px 0;
+  width: 21%;
+  background-color: #fff;
+  text-decoration: none;
 }
 
 .repo-image {
-    height: 200px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #1fb7c7;
-    background-image: url("../../../images/icons/default-icon.png");
-    border-radius: 5px 5px 0 0;
+  height: 200px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #1fb7c7;
+  background-image: url('../../../images/icons/default-icon.png');
+  border-radius: 5px 5px 0 0;
 }
 
 .repo-info {
-    padding: 10px 20px 30px;
-    border-left: 1px solid #d5dade;
-    border-right: 1px solid #d5dade;
-    border-bottom: 1px solid #d5dade;
-    border-radius: 0 0 5px 5px;
+  padding: 10px 20px 30px;
+  border-left: 1px solid #d5dade;
+  border-right: 1px solid #d5dade;
+  border-bottom: 1px solid #d5dade;
+  border-radius: 0 0 5px 5px;
 }
 
 .repo-title {
-    color: #282d2f;
-    margin: 5px 0 10px;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 1.4;
-    min-height: 50px;
+  color: #282d2f;
+  margin: 5px 0 10px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.4;
+  min-height: 50px;
 }
 
-
 .repo-description {
-    margin-bottom: 20px;
-    color: #77848F;
-    min-height: 70px;
+  margin-bottom: 20px;
+  color: #77848f;
+  min-height: 70px;
 }
 
 .repo-stars {
-    float: left;
-    color: #282D2F;
-    font-weight: bold;
+  float: left;
+  color: #282d2f;
+  font-weight: bold;
 }
 
 .repo-forks {
-    float: right;
-    color: #282D2F;
-    font-weight: bold;
-    text-decoration: none;
+  float: right;
+  color: #282d2f;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @media (max-width: 1606px) {
-    .repo {
-        width: 44%;
-    }
+  .repo {
+    width: 44%;
+  }
 }
 
 @media (max-width: 900px) {
-    .repo {
-        width: 100%;
-        margin: 0 0 30px;
-    }
+  .repo {
+    width: 100%;
+    margin: 0 0 30px;
+  }
 
-    .repo-title,
-    .repo-description {
-        min-height: 0;
-        margin-bottom: 20px;
-    }
+  .repo-title,
+  .repo-description {
+    min-height: 0;
+    margin-bottom: 20px;
+  }
 }
