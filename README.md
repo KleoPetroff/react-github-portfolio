@@ -14,11 +14,15 @@ Make sure you have NodeJS (v9.0 or later) and npm (v5.6.0 or later) installed.
 2.  Install all dependencies using `npm install`.
 3.  Start the project by running `npm start`.
 
+### Prettier and Precommit Hooks
+
+Prettier is used for automatic code formatting. It's executed on every commit using a precommit hook.
+
 ## Roadmap
 
 * [ ] Add unit tests, CI and static typing.
-* [ ] _Current Project page_ - a page with a detailed information of my current work in progress project.
-* [ ] "Issues Page" - a social page with all open issues of all my projects listed, where people can give suggestions and propose solutions.
+* [ ] **_Current Project page_** - a page with a detailed information of my current work in progress project.
+* [ ] **_Issues Page_** - a social page with all open issues of all my projects listed, where people can give suggestions and propose solutions.
 
 ## Contributing
 
