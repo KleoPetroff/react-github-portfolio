@@ -1,29 +1,27 @@
 header {
-    position: fixed;
-    top: 0;
-    padding-top: 14px;
-    width: 100%;
-    border-bottom: 2px solid #ebedf8;
-    background-color: #fff;
-    text-align: center;
-    z-index: 2;
+  position: fixed;
+  top: 0;
+  padding-top: 14px;
+  width: 100%;
+  border-bottom: 2px solid #ebedf8;
+  background-color: #fff;
+  text-align: center;
+  z-index: 2;
 }
 
 .back-button {
-    float: right;
-    margin-right: 25px;
-    line-height: 0;
+  float: right;
+  margin-right: 25px;
+  line-height: 0;
 }
 
 @media (max-width: 900px) {
-    header {
-        position: relative;
-        padding-bottom: 14px;
-    }
-    .back-button {
-        float: none;
-        margin-right: 0;
-    }
-
-
+  header {
+    position: relative;
+    padding-bottom: 14px;
+  }
+  .back-button {
+    float: none;
+    margin-right: 0;
+  }
 }

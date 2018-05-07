@@ -1,48 +1,48 @@
 .info {
-    position: absolute;
-    bottom: 66px;
-    padding: 0 20px 40px;
-    width: 100%;
+  position: absolute;
+  bottom: 66px;
+  padding: 0 20px 40px;
+  width: 100%;
 }
 
 .info-header {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
 .info-section {
-    display: inline-block;
-    width: 33%;
+  display: inline-block;
+  width: 33%;
 }
 
 .info-section h3 {
-    margin: 0;
-    font-size: 21px;
-    color: #282d2f;
+  margin: 0;
+  font-size: 21px;
+  color: #282d2f;
 }
 
 .info-section-content {
-    color: #77848F;
+  color: #77848f;
 }
 
 @media (max-width: 900px) {
-    .info {
-        display: none;
-    }
+  .info {
+    display: none;
+  }
 }
 
 @media (max-width: 1400px) {
-    .info-header {
-        font-size: 23px;
-    }
+  .info-header {
+    font-size: 23px;
+  }
 
-    .info-section {
-        width: 50%;
-        margin-bottom: 10px;
-    }
+  .info-section {
+    width: 50%;
+    margin-bottom: 10px;
+  }
 
-    .info-section h3 {
-        font-size: 18px;
-    }
+  .info-section h3 {
+    font-size: 18px;
+  }
 }

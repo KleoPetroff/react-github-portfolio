@@ -1,84 +1,84 @@
 .sort,
 .order {
-    padding: 40px 20px 0;
+  padding: 40px 20px 0;
 }
 
 .sort-heading,
 .order-heading {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 .sort-group,
 .order-group {
-    width: 100%;
-    padding-top: 10px;
-    clear: both;
+  width: 100%;
+  padding-top: 10px;
+  clear: both;
 }
 
 .sort-item,
 .order-item {
-    position: relative;
-    float: left;
-    padding: 10px 0;
-    min-width: 33%;
-    font-size: 13px;
-    color: #9fa9ba;
-    text-align: center;
-    border: 1px solid #cccfd4;
-    border-left: 0;
-    cursor: pointer;
+  position: relative;
+  float: left;
+  padding: 10px 0;
+  min-width: 33%;
+  font-size: 13px;
+  color: #9fa9ba;
+  text-align: center;
+  border: 1px solid #cccfd4;
+  border-left: 0;
+  cursor: pointer;
 }
 
 .order-item {
-    width: 50%;
+  width: 50%;
 }
 
 .sort-item.first,
 .order-item.first {
-    border-radius: 3px 0 0 3px;
-    border-left: 1px solid #cccfd4;
+  border-radius: 3px 0 0 3px;
+  border-left: 1px solid #cccfd4;
 }
 
 .sort-item.last,
 .order-item.last {
-    border-left: none;
-    border-radius: 0 3px 3px 0;
+  border-left: none;
+  border-radius: 0 3px 3px 0;
 }
 
 .sort-item.active,
 .order-item.active {
-    border-color: #0078bc;
-    border-right: 1px solid #0078bc;
-    background-color: #e3eefa;
-    color: #0078bc;
+  border-color: #0078bc;
+  border-right: 1px solid #0078bc;
+  background-color: #e3eefa;
+  color: #0078bc;
 }
 
 .sort-item.active:before,
 .order-item.active:before {
-    content: "";
-    display: block;
-    top: -1px;
-    left: -1px;
-    width: 1px;
-    padding-bottom: 2px;
-    height: 100%;
-    position: absolute;
-    background-color: #0078bc;
+  content: '';
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 1px;
+  padding-bottom: 2px;
+  height: 100%;
+  position: absolute;
+  background-color: #0078bc;
 }
 
 .sort-item.first.active:before,
 .order-item.first.active:before {
-    height: 0;
-    padding: 0;
+  height: 0;
+  padding: 0;
 }
 
 @media (max-width: 900px) {
-    .order {
-        padding: 20px 20px 40px;
-        text-align: center;
-    }
+  .order {
+    padding: 20px 20px 40px;
+    text-align: center;
+  }
 
-    .sort {
-        text-align: center;
-    }
+  .sort {
+    text-align: center;
+  }
 }

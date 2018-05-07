@@ -19,4 +19,3 @@ export function sort(repos, sortBy, order) {
     return 0;
   });
 }
-

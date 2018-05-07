@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import './App.css';
 
 import Header from './components/header/Header';
-import Repos from "./components/repos/Repos";
+import Repos from './components/repos/Repos';
 import Sidebar from './components/sidebar/Sidebar';
 
-import { getRepositories, setRepoLanguage } from './utils/helpers'
+import { getRepositories, setRepoLanguage } from './utils/helpers';
 import { sort } from './utils/sorting';
 
 class App extends Component {
@@ -24,8 +24,8 @@ class App extends Component {
       repos = await getRepositories();
 
       repos = repos.data
-        .filter(repo => repo.fork === false)
-        .map(repo => setRepoLanguage(repo));
+        .filter((repo) => repo.fork === false)
+        .map((repo) => setRepoLanguage(repo));
 
       // Store the repositories in localStorage after
       // every successful request and load them only

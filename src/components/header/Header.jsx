@@ -8,7 +8,7 @@ import logo from '../../images/logo.png';
 
 const Header = () => (
   <header>
-    <LogoButton src={logo} alt='Logo' href='./' />
+    <LogoButton src={logo} alt="Logo" href="./" />
     <Links />
   </header>
 );

@@ -1,28 +1,26 @@
 .main-content {
-    width: 76%;
-    float: right;
-    margin-top: 87px;
-    padding-bottom: 20px;
+  width: 76%;
+  float: right;
+  margin-top: 87px;
+  padding-bottom: 20px;
 }
 
 .content-heading {
-    margin-bottom: 20px;
-    font-family: Lato, sans-serif;
-    font-weight: bold;
-    font-size: 21px;
+  margin-bottom: 20px;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 21px;
 }
 
 @media (max-width: 900px) {
+  .content-heading {
+    text-align: center;
+  }
 
-    .content-heading {
-        text-align: center;
-    }
-
-    .main-content {
-        width: 100%;
-        padding: 0 40px;
-        margin-top: 20px;
-        float: none;
-
-    }
+  .main-content {
+    width: 100%;
+    padding: 0 40px;
+    margin-top: 20px;
+    float: none;
+  }
 }
