@@ -40,7 +40,8 @@ class App extends Component {
   }
 
   onSortChange = (sortBy, order) => {
-    this.setState({ repos: sort(this.state.repos, sortBy, order) });
+    const repos = [...this.state.repos];
+    this.setState({ repos: sort(repos, sortBy, order) });
   };
 
   render() {
