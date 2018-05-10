@@ -33,7 +33,7 @@ class App extends Component {
       // which is 60 requests per hour
       localStorage.setItem('repos', JSON.stringify(repos));
     } catch (e) {
-      repos = JSON.parse(localStorage.getItem('repos'));
+      repos = JSON.parse(localStorage.getItem('repos')) | [];
     } finally {
       this.setState({ repos: sort(repos, 'stargazers_count', 'desc') });
     }
