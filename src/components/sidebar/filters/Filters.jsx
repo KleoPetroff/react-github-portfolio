@@ -3,8 +3,8 @@ import React, { Fragment, Component } from 'react';
 import './filters.css';
 
 export default class Sorting extends Component {
-  sortCategories = ['language', 'stargazers_count', 'created_at'];
-  orderCategories = ['asc', 'desc'];
+  static sortCategories = ['language', 'stargazers_count', 'created_at'];
+  static orderCategories = ['asc', 'desc'];
 
   constructor(props) {
     super(props);
@@ -13,23 +13,27 @@ export default class Sorting extends Component {
       sortIndex: 1,
       orderIndex: 1
     };
+
+    this.changeSortType = this.changeSortType.bind(this);
+    this.changeOrderBy = this.changeOrderBy.bind(this);
   }
 
   applySorting() {
     const sortName = this.sortCategories[this.state.sortIndex];
     const orderName = this.orderCategories[this.state.orderIndex];
+
     this.props.onSortChange(sortName, orderName);
   }
 
-  changeSortType = (index) => {
+  changeSortType(index) {
     if (index === this.state.sortIndex) return;
     this.setState({ sortIndex: index }, this.applySorting);
-  };
+  }
 
-  changeOrderBy = (index) => {
+  changeOrderBy(index) {
     if (index === this.state.orderIndex) return;
     this.setState({ orderIndex: index }, this.applySorting);
-  };
+  }
 
   render() {
     return (
