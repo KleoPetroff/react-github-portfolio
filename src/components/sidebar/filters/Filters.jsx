@@ -3,8 +3,8 @@ import React, { Fragment, Component } from 'react';
 import './filters.css';
 
 export default class Sorting extends Component {
-  static sortCategories = ['language', 'stargazers_count', 'created_at'];
-  static orderCategories = ['asc', 'desc'];
+  sortCategories = ['language', 'stargazers_count', 'created_at'];
+  orderCategories = ['asc', 'desc'];
 
   constructor(props) {
     super(props);
