@@ -1,12 +1,12 @@
 {
-  "name": "react-alarm-clock",
+  "name": "react-github-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
+    "react-scripts": "2.1.5",
     "shortid": "^2.2.8"
   },
   "scripts": {
@@ -18,7 +18,10 @@
     "prettier": "prettier --config ./.prettierrc --write ./**/*.{jsx,js,md,css}"
   },
   "lint-staged": {
-    "**/*.{js,json,jsx,css,md}": ["prettier --write", "git add"]
+    "**/*.{js,json,jsx,css,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "main": "index.js",
   "repository": "https://github.com/KleoPetroff/github-portfolio.git",
@@ -28,5 +31,11 @@
     "husky": "0.14.3",
     "lint-staged": "7.1.0",
     "prettier": "1.12.1"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
