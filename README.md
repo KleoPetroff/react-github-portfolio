@@ -24,6 +24,10 @@ Prettier is used for automatic code formatting. It's executed on every commit us
 * [ ] **_Current Project page_** - a page with a detailed information of my current work in progress project.
 * [ ] **_Issues Page_** - a social page with all open issues of all my projects listed, where people can give suggestions and propose solutions.
 
+## Deployment
+
+The continuous deployment is done with Netlify.
+
 ## Contributing
 
 Pull Requests and Suggestions are highly recommended. Use the [issues](https://github.com/KleoPetroff/react-github-portfolio/issues) section to submit a suggestion or report an issue or submit a [pull request](https://github.com/KleoPetroff/react-github-portfolio/pulls).
