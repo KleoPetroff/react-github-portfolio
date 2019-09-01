@@ -6,7 +6,7 @@ The project uses the Github API and utilizes the browser's localStorage for pers
 
 ### Prerequisites
 
-Make sure you have NodeJS (v9.0 or later) and npm (v5.6.0 or later) installed.
+Make sure you have NodeJS (v9.0 or higher) and npm (v5.6.0 or higher) installed.
 
 ### How to build
 
@@ -20,13 +20,14 @@ Prettier is used for automatic code formatting. It's executed on every commit us
 
 ## Roadmap
 
-* [ ] Add unit tests, CI and static typing.
-* [ ] **_Current Project page_** - a page with a detailed information of my current work in progress project.
-* [ ] **_Issues Page_** - a social page with all open issues of all my projects listed, where people can give suggestions and propose solutions.
+- [ ] Add tests
+- [ ] Integrate Typescript
+- [ ] **_Current Project page_** - a page with a detailed information of my current work in progress project
+- [ ] **_Issues Page_** - a social page with all open issues of all my projects listed, where people can give suggestions and propose solutions
 
 ## Deployment
 
-The continuous deployment is done with Netlify.
+The continuous deployment is done using Netlify.
 
 ## Contributing
 
@@ -34,4 +35,4 @@ Pull Requests and Suggestions are highly recommended. Use the [issues](https://g
 
 ## License
 
-This project is licensed under the MIT License - check the [LICENSE](https://github.com/KleoPetroff/react-github-portfolio/blob/master/LICENSE) to details.
+This project is licensed under the MIT License - check the [LICENSE](https://github.com/KleoPetroff/react-github-portfolio/blob/master/LICENSE) for details.
