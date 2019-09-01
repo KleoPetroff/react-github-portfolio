@@ -13,7 +13,7 @@ const App = () => {
 
   useEffect(() => {
     const fetchRepos = async () => {
-      let fetchedRepos = [];
+      let fetchedRepos;
 
       try {
         fetchedRepos = await getRepositories();
