@@ -1,48 +1,51 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import { getUserInfo } from '../../../utils/helpers';
 
 import './info.css';
 
-export default class Info extends Component {
-  state = {
-    info: null
-  };
+const Info = () => {
+  const [info, setInfo] = useState(null);
 
-  async componentDidMount() {
-    let info = {};
+  useEffect(() => {
+    const fetchUserInfo = async () => {
+      let fetchedInfo;
 
-    try {
-      info = await getUserInfo();
+      try {
+        const user = await getUserInfo();
+        fetchedInfo = user.data;
 
-      localStorage.setItem('info', JSON.stringify(info));
-    } catch (e) {
-      info = JSON.parse(localStorage.getItem('info'));
-    } finally {
-      this.setState({ info: info.data });
-    }
-  }
+        localStorage.setItem('info', JSON.stringify(fetchedInfo));
+      } catch (e) {
+        fetchedInfo = JSON.parse(localStorage.getItem('info')) || null;
+      } finally {
+        setInfo(fetchedInfo);
+      }
+    };
 
-  render() {
-    if (!this.state.info) return <div />;
+    fetchUserInfo();
+  }, []);
 
-    return (
-      <div className="info">
-        <div className="info-header">{this.state.info.name}</div>
-        <div className="info-content">
-          <div className="info-section">
-            <h3>{this.state.info.public_repos} </h3>
-            <div className="info-section-content">Repos</div>
-          </div>
-          <div className="info-section">
-            <h3>{this.state.info.followers} </h3>
-            <div className="info-section-content">Followers</div>
-          </div>
-          <div className="info-section">
-            <h3>{this.state.info.following} </h3>
-            <div className="info-section-content">Following</div>
-          </div>
+  if (!info) return <div />;
+
+  return (
+    <div className="info">
+      <div className="info-header">{info.name}</div>
+      <div className="info-content">
+        <div className="info-section">
+          <h3>{info.public_repos} </h3>
+          <div className="info-section-content">Repos</div>
+        </div>
+        <div className="info-section">
+          <h3>{info.followers} </h3>
+          <div className="info-section-content">Followers</div>
+        </div>
+        <div className="info-section">
+          <h3>{info.following} </h3>
+          <div className="info-section-content">Following</div>
         </div>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
+export default Info;
