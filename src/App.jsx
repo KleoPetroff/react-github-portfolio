@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 import Header from './components/header/Header';
@@ -8,53 +8,46 @@ import Sidebar from './components/sidebar/Sidebar';
 import { getRepositories, setRepoLanguage } from './utils/helpers';
 import { sort } from './utils/sorting';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
+const App = () => {
+  const [repos, setRepos] = useState([]);
 
-    this.onSortChange = this.onSortChange.bind(this);
-  }
+  useEffect(() => {
+    const fetchRepos = async () => {
+      let fetchedRepos = [];
 
-  state = {
-    repos: []
+      try {
+        fetchedRepos = await getRepositories();
+
+        fetchedRepos = fetchedRepos.data
+          .filter((repo) => repo.fork === false)
+          .map((repo) => setRepoLanguage(repo));
+
+        // Store the repositories in localStorage after
+        // every successful request and load them only
+        // when Github's request limit is exceeded
+        // which is 60 requests per hour
+        localStorage.setItem('repos', JSON.stringify(fetchedRepos));
+      } catch {
+        fetchedRepos = JSON.parse(localStorage.getItem('repos')) || [];
+      } finally {
+        setRepos(sort(fetchedRepos, 'stargazers_count', 'desc'));
+      }
+    };
+
+    fetchRepos();
+  }, []);
+
+  const onSortChange = (sortBy, order) => {
+    setRepos(sort([...repos], sortBy, order));
   };
 
-  async componentDidMount() {
-    let repos = [];
-
-    try {
-      repos = await getRepositories();
-
-      repos = repos.data
-        .filter((repo) => repo.fork === false)
-        .map((repo) => setRepoLanguage(repo));
-
-      // Store the repositories in localStorage after
-      // every successful request and load them only
-      // when Github's request limit is exceeded
-      // which is 60 requests per hour
-      localStorage.setItem('repos', JSON.stringify(repos));
-    } catch (e) {
-      repos = JSON.parse(localStorage.getItem('repos')) | [];
-    } finally {
-      this.setState({ repos: sort(repos, 'stargazers_count', 'desc') });
-    }
-  }
-
-  onSortChange(sortBy, order) {
-    const repos = [...this.state.repos];
-    this.setState({ repos: sort(repos, sortBy, order) });
-  }
-
-  render() {
-    return (
-      <div className="wrapper">
-        <Header />
-        <Sidebar onSortChange={this.onSortChange} />
-        <Repos repos={this.state.repos} />
-      </div>
-    );
-  }
-}
+  return (
+    <div className="wrapper">
+      <Header />
+      <Sidebar onSortChange={onSortChange} />
+      <Repos repos={repos} />
+    </div>
+  );
+};
 
 export default App;
