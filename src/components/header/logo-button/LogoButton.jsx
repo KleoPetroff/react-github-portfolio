@@ -2,10 +2,10 @@ import React from 'react';
 
 import './logo-button.css';
 
-const LogoButton = ({ src, alt, href }) => (
-  <a className="logo" href={href}>
+const LogoButton = ({ src, alt }) => (
+  <div className="logo">
     <img src={src} alt={alt} />
-  </a>
+  </div>
 );
 
 export default LogoButton;
