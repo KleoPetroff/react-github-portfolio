@@ -1,97 +1,83 @@
-import React, { Fragment, Component } from 'react';
-
+import React, { Fragment, useState, useEffect } from 'react';
 import './filters.css';
+import { useIsInitial } from '../../../hooks/useIsInitial';
 
-export default class Sorting extends Component {
-  sortCategories = ['language', 'stargazers_count', 'created_at'];
-  orderCategories = ['asc', 'desc'];
+const SORT_CATEGORIES = ['language', 'stargazers_count', 'created_at'];
+const ORDER_CATEGORIES = ['asc', 'desc'];
 
-  constructor(props) {
-    super(props);
+const Sorting = ({ onSortChange }) => {
+  const [sortIndex, setSortIndex] = useState(1);
+  const [orderIndex, setOrderIndex] = useState(1);
 
-    this.state = {
-      sortIndex: 1,
-      orderIndex: 1
-    };
+  const isInitial = useIsInitial();
 
-    this.changeSortType = this.changeSortType.bind(this);
-    this.changeOrderBy = this.changeOrderBy.bind(this);
-  }
+  useEffect(() => {
+    if (!isInitial) {
+      applySorting();
+    }
+  }, [sortIndex, orderIndex]);
 
-  applySorting() {
-    const sortName = this.sortCategories[this.state.sortIndex];
-    const orderName = this.orderCategories[this.state.orderIndex];
+  const applySorting = () => {
+    const sortName = SORT_CATEGORIES[sortIndex];
+    const orderName = ORDER_CATEGORIES[orderIndex];
 
-    this.props.onSortChange(sortName, orderName);
-  }
+    onSortChange(sortName, orderName);
+  };
 
-  changeSortType(index) {
-    if (index === this.state.sortIndex) return;
-    this.setState({ sortIndex: index }, this.applySorting);
-  }
+  const changeSortType = (index) => {
+    if (index === sortIndex) return;
+    setSortIndex(index);
+  };
 
-  changeOrderBy(index) {
-    if (index === this.state.orderIndex) return;
-    this.setState({ orderIndex: index }, this.applySorting);
-  }
+  const changeOrderBy = (index) => {
+    if (index === orderIndex) return;
+    setOrderIndex(index);
+  };
 
-  render() {
-    return (
-      <Fragment>
-        <div className="sort">
-          <div className="sort-heading">Sort by</div>
-          <div className="sort-group clearfix">
-            <div
-              onClick={() => this.changeSortType(0)}
-              className={
-                (this.state.sortIndex === 0 ? 'active ' : '') +
-                'sort-item first'
-              }
-            >
-              Type
-            </div>
-            <div
-              onClick={() => this.changeSortType(1)}
-              className={
-                (this.state.sortIndex === 1 ? 'active ' : '') + 'sort-item'
-              }
-            >
-              Stars
-            </div>
-            <div
-              onClick={() => this.changeSortType(2)}
-              className={
-                (this.state.sortIndex === 2 ? 'active ' : '') + 'sort-item last'
-              }
-            >
-              Date
-            </div>
+  return (
+    <Fragment>
+      <div className="sort">
+        <div className="sort-heading">Sort by</div>
+        <div className="sort-group clearfix">
+          <div
+            onClick={() => changeSortType(0)}
+            className={(sortIndex === 0 ? 'active ' : '') + 'sort-item first'}
+          >
+            Type
+          </div>
+          <div
+            onClick={() => changeSortType(1)}
+            className={(sortIndex === 1 ? 'active ' : '') + 'sort-item'}
+          >
+            Stars
+          </div>
+          <div
+            onClick={() => changeSortType(2)}
+            className={(sortIndex === 2 ? 'active ' : '') + 'sort-item last'}
+          >
+            Date
           </div>
         </div>
-        <div className="order">
-          <div className="order-heading">Order</div>
-          <div className="order-group clearfix">
-            <div
-              onClick={() => this.changeOrderBy(0)}
-              className={
-                (this.state.orderIndex === 0 ? 'active ' : '') +
-                'order-item first'
-              }
-            >
-              ASC
-            </div>
-            <div
-              onClick={() => this.changeOrderBy(1)}
-              className={
-                (this.state.orderIndex === 1 ? 'active ' : '') +
-                'order-item last'
-              }
-            >
-              DESC
-            </div>
+      </div>
+      <div className="order">
+        <div className="order-heading">Order</div>
+        <div className="order-group clearfix">
+          <div
+            onClick={() => changeOrderBy(0)}
+            className={(orderIndex === 0 ? 'active ' : '') + 'order-item first'}
+          >
+            ASC
+          </div>
+          <div
+            onClick={() => changeOrderBy(1)}
+            className={(orderIndex === 1 ? 'active ' : '') + 'order-item last'}
+          >
+            DESC
           </div>
         </div>
-      </Fragment>
-    );
-  }
-}
+      </div>
+    </Fragment>
+  );
+};
+
+export default Sorting;
