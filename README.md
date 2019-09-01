@@ -2,6 +2,8 @@
 
 ## Getting Started
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/33ba1eed7e1e438cbf3a1a277140a7a8)](https://app.codacy.com/app/KleoPetroff/react-github-portfolio?utm_source=github.com&utm_medium=referral&utm_content=KleoPetroff/react-github-portfolio&utm_campaign=Badge_Grade_Dashboard)
+
 The project uses the Github API and utilizes the browser's localStorage for persistence. The following instructions will give you a copy of the project on your local machine for development and testing purposes.
 
 ### Prerequisites
