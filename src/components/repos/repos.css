@@ -5,22 +5,11 @@
   padding-bottom: 20px;
 }
 
-.content-heading {
-  margin-bottom: 20px;
-  font-family: Lato, sans-serif;
-  font-weight: bold;
-  font-size: 21px;
-}
-
 @media (max-width: 900px) {
-  .content-heading {
-    text-align: center;
-  }
-
   .main-content {
     width: 100%;
     padding: 0 40px;
-    margin-top: 20px;
+    margin: 20px 0;
     float: none;
   }
 }

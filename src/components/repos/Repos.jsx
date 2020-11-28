@@ -7,8 +7,6 @@ import './repos.css';
 
 const Repos = ({ repos }) => (
   <div className="main-content">
-    <h2 className="content-heading">Projects</h2>
-
     {repos && (
       <div className="content-grid">
         {repos.map((repo) => (
