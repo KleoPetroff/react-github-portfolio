@@ -16,7 +16,7 @@ body {
 div,
 span,
 a {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 .wrapper {
