@@ -20,7 +20,7 @@
   position: relative;
   float: left;
   padding: 10px 0;
-  min-width: 33%;
+  min-width: 33.3%;
   font-size: 13px;
   color: #9fa9ba;
   text-align: center;
@@ -79,6 +79,7 @@
   }
 
   .sort {
+    padding-top: 20px;
     text-align: center;
   }
 }
