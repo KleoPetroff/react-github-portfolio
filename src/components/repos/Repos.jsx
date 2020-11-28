@@ -8,11 +8,11 @@ import './repos.css';
 const Repos = ({ repos }) => (
   <div className="main-content">
     {repos && (
-      <div className="content-grid">
+      <>
         {repos.map((repo) => (
           <RepoCard repo={repo} key={shortid.generate()} />
         ))}
-      </div>
+      </>
     )}
   </div>
 );
