@@ -5,11 +5,8 @@ import Header from './components/header/Header';
 import Repos from './components/repos/Repos';
 import Sidebar from './components/sidebar/Sidebar';
 
-import {
-  getRepositories,
-  setRepoDescription,
-  setRepoLanguage
-} from './utils/helpers';
+import { setRepoDescription, setRepoLanguage } from './utils/helpers';
+import { getRepositories } from './utils/api';
 import { sort } from './utils/sorting';
 
 const App = () => {

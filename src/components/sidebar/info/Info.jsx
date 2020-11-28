@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getUserInfo } from '../../../utils/helpers';
+import { getUserInfo } from '../../../utils/api';
 
 import './info.css';
 
