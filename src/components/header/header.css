@@ -1,7 +1,7 @@
 header {
   position: fixed;
   top: 0;
-  padding-top: 14px;
+  padding: 14px 0;
   width: 100%;
   border-bottom: 2px solid #ebedf8;
   background-color: #fff;
