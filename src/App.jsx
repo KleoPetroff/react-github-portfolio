@@ -21,8 +21,8 @@ const App = () => {
 
         fetchedRepos = fetchedRepos.data
           .filter((repo) => repo.fork === false)
-          .map((repo) => setRepoLanguage(repo))
-          .map((repo) => setRepoDescription(repo));
+          .map(setRepoLanguage)
+          .map(setRepoDescription);
 
         // Store the repositories in localStorage after
         // every successful request and load them only
