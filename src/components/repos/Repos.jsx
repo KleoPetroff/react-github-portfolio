@@ -9,9 +9,13 @@ const Repos = ({ repos }) => (
   <div className="main-content">
     <h2 className="content-heading">Projects</h2>
 
-    <div className="content-grid">
-      {repos.map((repo) => <RepoCard repo={repo} key={shortid.generate()} />)}
-    </div>
+    {repos && (
+      <div className="content-grid">
+        {repos.map((repo) => (
+          <RepoCard repo={repo} key={shortid.generate()} />
+        ))}
+      </div>
+    )}
   </div>
 );
 

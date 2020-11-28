@@ -5,7 +5,11 @@ import Header from './components/header/Header';
 import Repos from './components/repos/Repos';
 import Sidebar from './components/sidebar/Sidebar';
 
-import { getRepositories, setRepoLanguage } from './utils/helpers';
+import {
+  getRepositories,
+  setRepoDescription,
+  setRepoLanguage
+} from './utils/helpers';
 import { sort } from './utils/sorting';
 
 const App = () => {
@@ -20,7 +24,8 @@ const App = () => {
 
         fetchedRepos = fetchedRepos.data
           .filter((repo) => repo.fork === false)
-          .map((repo) => setRepoLanguage(repo));
+          .map((repo) => setRepoLanguage(repo))
+          .map((repo) => setRepoDescription(repo));
 
         // Store the repositories in localStorage after
         // every successful request and load them only
